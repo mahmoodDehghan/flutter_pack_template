@@ -16,6 +16,8 @@ void main() {
   executeTestSuite(
     configuration: FlutterTestConfiguration(
       stepDefinitions: [tapButtonNTimesStep()],
+      waitImplicitlyAfterAction: true,
+      semanticsEnabled: false,
       reporters: [
         StdoutReporter(MessageLevel.error)
           ..setWriteLineFn(print)
